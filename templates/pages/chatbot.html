@@ -1,46 +1,54 @@
 <!DOCTYPE html>
-<html> 
-<head> 
-<meta charset="utf-8"> 
-<title>Web Speech Chat-bot Demo</title> 
-<link rel="stylesheet" type="text/css" href="/static/user/css/chatbot.css"> 
-</head> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Web Speech Chat-bot Demo</title>
+<link rel="stylesheet" type="text/css" href="/static/user/css/chatbot.css">
+</head>
 <body>
- <h1 class="center" id="headline"> <div id="info">
-  <p id="info_start">REC 버튼을 누르시면 녹음이 시작됩니다.</p>
-  <p id="info_speak_now">입성 입력 중입니다.</p>
-  <p id="info_no_speech">No speech was detected. You may need to adjust your
-    <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
-      microphone settings</a>.</p>
-  <p id="info_no_microphone" style="display:none">
-    No microphone was found. Ensure that a microphone is installed and that
-    <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
-    microphone settings</a> are configured correctly.</p>
-  <p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
-  <p id="info_denied">Permission to use microphone was denied.</p>
-  <p id="info_blocked">Permission to use microphone is blocked. To change,
-    go to chrome://settings/contentExceptions#media-stream</p>
-  <p id="info_upgrade">Web Speech API is not supported by this browser.
-     Upgrade to <a href="//www.google.com/chrome">Chrome</a>
-     version 25 or later.</p> </div> <div class="right"> </div> <div id="results">
-  <p> </div> 
-<div class="center">
-  <p>
+ <h1 class="center" id="headline">
+   <div id="info">
+      <p id="info_start">REC 버튼을 누르시면 녹음이 시작됩니다.</p>
+      <p id="info_speak_now">입성 입력 중입니다.</p>
+      <p id="info_no_speech">No speech was detected. You may need to adjust your
+        <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+          microphone settings</a>.</p>
+      <p id="info_no_microphone" style="display:none">
+        No microphone was found. Ensure that a microphone is installed and that
+        <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+        microphone settings</a> are configured correctly.</p>
+      <p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
+      <p id="info_denied">Permission to use microphone was denied.</p>
+      <p id="info_blocked">Permission to use microphone is blocked. To change,
+        go to chrome://settings/contentExceptions#media-stream</p>
+      <p id="info_upgrade">Web Speech API is not supported by this browser.
+         Upgrade to <a href="//www.google.com/chrome">Chrome</a>
+         version 25 or later.</p>
+   </div>
+   
+     <div class="right"> </div>
+     <div id="results"> <p> </div>
+
+  <div class="center"> <p>
+
   <div id="div_language" style="display:none;">
     <select id="select_language" onchange="updateCountry()" ></select>
     &nbsp;&nbsp;
     <select id="select_dialect"></select>
   </div>
+
   <button id="start_button" onclick="startButton(event);" onfocus="this.blur();">
     <p id="start_txt" alt="Start">REC</p>
   </button>
-    <div id="q_list">
-    </div>
-  </div> 
-</body> 
-</html> 
+
+  <div id="q_list"></div>
+
+  </div>
+</body>
+</html>
+
 <script type="text/javascript">
   var gov_div = "{{choose_gov}}";
-  var api_user = "{{choose_user}}"; 
-</script> 
+  var api_user = "{{choose_user}}";
+</script>
 <script src="/static/user/js/chatbot.js"></script>
