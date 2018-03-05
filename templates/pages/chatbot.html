@@ -6,8 +6,10 @@
 <link rel="stylesheet" type="text/css" href="/static/user/css/chatbot.css">
 </head>
 <body>
+
  <h1 class="center" id="headline">
-   <div id="info">
+
+    <div id="info">
       <p id="info_start">REC 버튼을 누르시면 녹음이 시작됩니다.</p>
       <p id="info_speak_now">입성 입력 중입니다.</p>
       <p id="info_no_speech">No speech was detected. You may need to adjust your
@@ -24,26 +26,25 @@
       <p id="info_upgrade">Web Speech API is not supported by this browser.
          Upgrade to <a href="//www.google.com/chrome">Chrome</a>
          version 25 or later.</p>
-   </div>
-   
-     <div class="right"> </div>
-     <div id="results"> <p> </div>
+    </div>
 
-  <div class="center"> <p>
+    <div class="right"> </div>
+    <div id="results"> <p> </div>
 
-  <div id="div_language" style="display:none;">
-    <select id="select_language" onchange="updateCountry()" ></select>
-    &nbsp;&nbsp;
-    <select id="select_dialect"></select>
-  </div>
+    <div class="center"> <p>
+        <div id="div_language" style="display:none;">
+          <select id="select_language" onchange="updateCountry()" ></select>
+          &nbsp;&nbsp;
+          <select id="select_dialect"></select>
+        </div>
 
-  <button id="start_button" onclick="startButton(event);" onfocus="this.blur();">
-    <p id="start_txt" alt="Start">REC</p>
-  </button>
+        <button id="start_button" onclick="startButton(event);" onfocus="this.blur();">
+          <p id="start_txt" alt="Start">REC</p>
+        </button>
 
-  <div id="q_list"></div>
+        <div id="q_list"></div>
+    </div>
 
-  </div>
 </body>
 </html>
 
