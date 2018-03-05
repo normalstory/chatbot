@@ -11,7 +11,25 @@
 </head>
 
 <body>
-    <div id="info">
+
+  <p>Chat-bot for civil petition on web</p>
+    <div class="right"> </div>
+
+    <div id="results"> <p> </div>
+
+    <div class="center"> <p>
+        <div id="div_language" style="display:none;">
+          <select id="select_language" onchange="updateCountry()" ></select>
+          &nbsp;&nbsp;
+          <select id="select_dialect"></select>
+        </div>
+        <button id="start_button" onclick="startButton(event);" onfocus="this.blur();">
+          <p id="start_txt" alt="Start">REC</p>
+        </button>
+        <div id="q_list"></div>
+    </div>
+
+    <div class="right" id="info">
       <p id="info_start">REC 버튼을 누르시면 녹음이 시작됩니다.</p>
       <p id="info_speak_now">입성 입력 중입니다.</p>
       <p id="info_no_speech">No speech was detected. You may need to adjust your
@@ -30,28 +48,11 @@
          version 25 or later.</p>
     </div>
 
-    <div class="right"> </div>
-
-    <div id="results"> <p> </div>
-
-    <div class="center"> <p>
-        <div id="div_language" style="display:none;">
-          <select id="select_language" onchange="updateCountry()" ></select>
-          &nbsp;&nbsp;
-          <select id="select_dialect"></select>
-        </div>
-
-        <button id="start_button" onclick="startButton(event);" onfocus="this.blur();">
-          <p id="start_txt" alt="Start">REC</p>
-        </button>
-        <div id="q_list"></div>
-    </div>
-
     <script type="text/javascript">
       var gov_div = "{{choose_gov}}";
       var api_user = "{{choose_user}}";
     </script>
-    
+
     <script src="/static/user/js/chatbot.js"></script>
 
 </body>
